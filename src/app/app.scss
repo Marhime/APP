@@ -14,3 +14,106 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+ion-icon {
+    &[class*="custom-"] {
+        // Instead of using the font-based icons
+        // We're applying SVG masks
+        mask-size: contain;
+        mask-position: 50% 50%;
+        mask-repeat: no-repeat;
+        background: currentColor;
+        width: 1em;
+        height: 1em;
+    }
+    // custom icons
+    &[class*="custom-contacts"] {
+        mask-image: url(../assets/icon/contacts.svg);
+    }
+    &[class*="custom-webradio"] {
+        mask-image: url(../assets/icon/webradio.svg);
+    }
+    &[class*="custom-agenda"] {
+        mask-image: url(../assets/icon/agenda.svg);
+    }
+    &[class*="custom-search"] {
+        mask-image: url(../assets/icon/search.svg);
+    }
+    &[class*="custom-params"] {
+        mask-image: url(../assets/icon/params.svg);
+    }
+    &[class*="custom-like"] {
+        mask-image: url(../assets/icon/like.svg);
+    }
+    &[class*="custom-comments"] {
+        mask-image: url(../assets/icon/comments.svg);
+    }
+}
+
+    .webradio{
+        background: url(../assets/imgs/artiste-fond.png) no-repeat;
+        background-size: cover; 
+        height: 55vh;
+
+        h1{
+            color: white !important;
+            font-weight: 400;
+            filter: drop-shadow(0 0 0.75rem black);
+        }
+        h3{
+            color: rgba($color: #ffffff, $alpha: 0.5) !important;
+            font-weight: 200;
+            font-size: 1.5rem;
+            filter: drop-shadow(0 0 0.75rem black);
+        }
+        .hashtag-container{
+            background: rgba($color: #000, $alpha: 0.5) !important;
+            border-radius: 5rem;
+            width: fit-content;
+            margin: 0 auto;
+            p{
+                color: #ffffff;
+                padding: 0.15rem 1rem;
+            }
+        }
+        .counter{
+            ion-icon{
+                color: white;
+                transform: scale(1.5);
+                margin-right: 1rem;
+                margin-bottom: 0.3rem;
+            }
+            div{
+                display: inline-block;
+                color: #ffffff;
+                font-size: 1rem;
+                font-weight: 200;
+                span{
+                    font-size: 1.2rem;
+                    font-weight: 400;
+                }
+            }
+            ion-col:nth-child(1){
+                border-right: #ffffff 1px solid;
+            }
+        }
+    }
+    ion-item{
+        background: transparent !important;
+        ion-icon{
+            color: white;
+            transform: scale(0.7);
+        }
+        .item-md, .item-block, .item-inner {
+            border-bottom: none !important;
+        }
+        .avatar-user{
+            margin: 0 auto;
+            height: 9rem !important;
+            width: 9rem !important;
+        }
+        .username{
+            color: white;
+            text-shadow: 1em;
+        }
+    }
